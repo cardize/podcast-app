@@ -1,11 +1,18 @@
 import React from 'react'
-import Header from './components/Header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginPage from './pages/LoginPage'
+import BrowserPage from './pages/BrowsePage'
+import PodcastPage from './pages/PodcastPage'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/browse" element={<BrowserPage />} />
+        <Route path="/podcast" element={<PodcastPage />} />
+      </Routes>
+    </Router>
   )
 }
 
