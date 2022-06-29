@@ -1,15 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import logo from '../../assets/Images/logo.svg'
+import { NavLink } from 'react-router-dom'
+import '../../assets/Styles/logo.scss'
 
-const Header = () => {
+const Logo = () => {
   return (
     <div className="logo-container">
       <NavLink to="/">
-        <img src={logo} />
+        <img className="logo" src={logo} />
       </NavLink>
     </div>
   )
 }
 
-export default Header
+export default Logo

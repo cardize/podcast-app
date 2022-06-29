@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from '../../components/Header'
+import Logo from '../../components/Logo'
 import Podcast from '../../components/Podcast'
+import '../../assets/Styles/browse-page.scss'
 
 const BrowsePage = () => {
   return (
     <div className="App">
-      <Header />
+      <Logo />
       <h1>Browse Page</h1>
       <Podcast />
     </div>

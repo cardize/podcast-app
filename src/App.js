@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import BrowserPage from './pages/BrowsePage'
 import PodcastPage from './pages/PodcastPage'
+import './assets/Styles/app.scss'
 
 const App = () => {
   return (
