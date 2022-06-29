@@ -10,9 +10,9 @@ const LoginPage = () => {
     <div className="main">
       <img className="frame" src={frame} />
       <img className="background" src={background} />
-      <Logo />
       <LoginForm />
       <h1 className="login-title">Episodic series of digital audio. </h1>
+      <Logo />
     </div>
   )
 }
