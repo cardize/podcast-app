@@ -1,9 +1,9 @@
 import React from 'react'
 import Logo from '../../components/Logo'
 import LoginForm from '../../components/LoginForm'
-import background from '../../assets/Images/background.png'
-import '../../assets/Styles/login-page.scss'
-import frame from '../../assets/Images/frame.svg'
+import background from '../../assets/images/background.png'
+import '../../assets/styles/pages/login-page.scss'
+import frame from '../../assets/images/frame.svg'
 
 const LoginPage = () => {
   return (
@@ -12,7 +12,7 @@ const LoginPage = () => {
       <img className="frame" src={frame} />
       <img className="background" src={background} />
       <LoginForm />
-      <h1 className="login-title">Episodic series of digital audio. </h1>
+      <span className="login-title">Episodic series of digital audio. </span>
       <Logo />
     </div>
   )

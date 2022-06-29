@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import '../../assets/Styles/podcast.scss'
-import clockIcon from '../../assets/Images/clock-icon.svg'
-import testPic from '../../assets/Images/test.png'
+import '../../assets/styles/components/podcast.scss'
+import clockIcon from '../../assets/images/clock-icon.svg'
+import testPic from '../../assets/images/test.png'
 
 const Podcast = () => {
   return (

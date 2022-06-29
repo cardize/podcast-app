@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import '../../assets/Styles/login-form.scss'
+import '../../assets/styles/components/login-form.scss'
 
-const Header = () => {
+const LoginForm = () => {
   return (
     <div className="login-container">
       <form className="login-form">
@@ -26,4 +26,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default LoginForm

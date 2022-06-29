@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../../components/Logo'
 import Podcast from '../../components/Podcast'
 import Search from '../../components/Search'
-import '../../assets/Styles/browse-page.scss'
+import '../../assets/styles/pages/browse-page.scss'
 
 const BrowsePage = () => {
   return (
