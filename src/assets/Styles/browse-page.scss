@@ -1,0 +1,51 @@
+.browse-main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1200px;
+  background: #09121c;
+}
+
+.browse-main .logo {
+  width: 90px;
+  height: 42px;
+  left: 33px;
+  top: 53px;
+}
+
+.browse-title {
+  position: absolute;
+  width: 309px;
+  height: 62px;
+  left: 33px;
+  top: 130px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #ffffff;
+}
+
+.podcasts-title {
+  position: absolute;
+  width: 92px;
+  height: 19px;
+  left: 34px;
+  top: 445px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #898f97;
+}
+.podcasts-container {
+  position: absolute;
+  width: 92px;
+  height: 19px;
+  left: 34px;
+  top: 488px;
+}

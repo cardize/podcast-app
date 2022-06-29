@@ -7,7 +7,8 @@ import frame from '../../assets/Images/frame.svg'
 
 const LoginPage = () => {
   return (
-    <div className="main">
+    <div className="login-main">
+      <div className="login-background"></div>
       <img className="frame" src={frame} />
       <img className="background" src={background} />
       <LoginForm />
