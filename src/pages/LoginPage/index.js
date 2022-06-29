@@ -11,8 +11,8 @@ const LoginPage = () => {
       <div className="login-background"></div>
       <img className="frame" src={frame} />
       <img className="background" src={background} />
-      <LoginForm />
       <span className="login-title">Episodic series of digital audio. </span>
+      <LoginForm />
       <Logo />
     </div>
   )
