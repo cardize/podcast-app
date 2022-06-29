@@ -8,7 +8,6 @@ import frame from '../../assets/Images/frame.svg'
 const LoginPage = () => {
   return (
     <div className="main">
-      <span className="blurr" />
       <img className="frame" src={frame} />
       <img className="background" src={background} />
       <Logo />
