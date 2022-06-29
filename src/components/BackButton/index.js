@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const BackButton = () => {
   return (
     <div className="logo-container">
       <NavLink to="/browse">
@@ -11,4 +11,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default BackButton
