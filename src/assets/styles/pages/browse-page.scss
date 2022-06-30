@@ -5,20 +5,20 @@
   height: 1200px;
   background: #09121c;
 }
-
 .browse-main .logo {
   width: 90px;
   height: 42px;
-  left: 33px;
   top: 53px;
+  left: 35.87px;
 }
 
 .browse-title {
   position: absolute;
   width: 309px;
   height: 62px;
-  left: 33px;
   top: 130px;
+
+  margin-left: 33px;
 
   font-style: normal;
   font-weight: 700;
@@ -32,8 +32,9 @@
   position: absolute;
   width: 92px;
   height: 19px;
-  left: 34px;
   top: 445px;
+
+  margin-left: 34px;
 
   font-style: normal;
   font-weight: 500;
@@ -46,6 +47,7 @@
   position: absolute;
   width: 92px;
   height: 19px;
-  left: 34px;
   top: 488px;
+
+  margin-left: 34px;
 }

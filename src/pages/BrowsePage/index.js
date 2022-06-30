@@ -10,8 +10,8 @@ const BrowsePage = () => {
     <div className="browse-main">
       <Logo />
       <span className="browse-title">Browse</span>
-      <ScrollMenu />
       <Search />
+      <ScrollMenu />
       <span className="podcasts-title">Podcasts(3)</span>
       <div className="podcasts-container">
         <Podcast />

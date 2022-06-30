@@ -8,10 +8,10 @@ import frame from '../../assets/images/frame.svg'
 const LoginPage = () => {
   return (
     <div className="login-main">
+      <span className="login-title">Episodic series of digital audio. </span>
       <div className="login-background"></div>
       <img className="frame" src={frame} />
       <img className="background" src={background} />
-      <span className="login-title">Episodic series of digital audio. </span>
       <LoginForm />
       <Logo />
     </div>

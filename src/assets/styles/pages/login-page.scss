@@ -10,20 +10,6 @@
     left: 33px;
     top: 51px;
   }
-  h1 {
-    position: absolute;
-    width: 195px;
-    height: 60px;
-    left: 33px;
-    top: 171px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 125%;
-
-    color: #ffffff;
-  }
 }
 
 .background {
@@ -38,8 +24,9 @@
   position: absolute;
   width: 195px;
   height: 60px;
-  left: 33px;
   top: 171px;
+
+  margin-left: 33px;
 
   font-style: normal;
   font-weight: 500;
@@ -47,6 +34,8 @@
   line-height: 125%;
 
   color: #ffffff;
+
+  z-index: 200;
 }
 .login-background {
   position: absolute;
