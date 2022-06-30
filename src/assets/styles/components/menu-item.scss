@@ -1,0 +1,39 @@
+.react-horizontal-scrolling-menu--wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 3.39%;
+  right: 1.69%;
+  top: 304px;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+  height: 128px;
+}
+
+.menu-container {
+  width: 70px;
+  height: 70px;
+
+  margin-left: 20px;
+
+  background-color: #19232f;
+  border-radius: 50%;
+  .menu-item {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    .menu-img {
+      width: 22px;
+      height: 22px;
+
+      margin-top: 25px;
+    }
+    .menu-title {
+      margin-top: 45px;
+
+      font-size: 12px;
+      font-weight: bolder;
+      color: #898f97;
+    }
+  }
+}
