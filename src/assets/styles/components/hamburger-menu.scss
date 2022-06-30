@@ -1,0 +1,16 @@
+.hamburger-menu-container {
+  position: absolute;
+  top: 64px;
+  right: 34px;
+
+  background: none;
+
+  z-index: 1000;
+  .hamburger-menu-button {
+    border: none;
+    background: none;
+
+    width: 20px;
+    height: 14px;
+  }
+}

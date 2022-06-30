@@ -1,0 +1,16 @@
+.back-button-container {
+  position: absolute;
+  top: 64px;
+  left: 32px;
+
+  background: none;
+
+  z-index: 1000;
+  .back-button {
+    border: none;
+    background: none;
+
+    width: 18.41px;
+    height: 17.41px;
+  }
+}
