@@ -1,11 +1,13 @@
 import React from 'react'
-import BackButton from '../../components/BackButton'
+import PodcastPlayer from '../../components/PodcastPlayer'
+import '../../assets/styles/pages/podcast-page.scss'
 
 const PodcastPage = () => {
   return (
-    <div className="App">
-      <h1>Podcast Page</h1>
-      <BackButton />
+    <div className="podcast-main">
+      <div className="podcast-player">
+        <PodcastPlayer />
+      </div>
     </div>
   )
 }

@@ -1,0 +1,17 @@
+.play-button-container {
+  position: absolute;
+  top: 105px;
+  left: 234px;
+  .play-button {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    width: 51px;
+    height: 51px;
+
+    border: none;
+    border-radius: 50%;
+    background: #ff334b;
+  }
+}

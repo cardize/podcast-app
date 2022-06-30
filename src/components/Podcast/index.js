@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import '../../assets/styles/components/podcast.scss'
 import clockIcon from '../../assets/images/clock-icon.svg'
 import testPic from '../../assets/images/test.png'
+import PlayButton from '../PlayButton'
 
 const Podcast = () => {
   return (
@@ -20,6 +21,7 @@ const Podcast = () => {
           <img className="author-image" src={testPic} />
           <span className="podcast-author"> Theresa Hawkins</span>
         </span>
+        <PlayButton />
       </NavLink>
     </div>
   )

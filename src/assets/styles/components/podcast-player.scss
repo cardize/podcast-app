@@ -1,0 +1,70 @@
+.podcast-player-container {
+  .podcast-player {
+    position: absolute;
+    display: grid;
+    justify-items: center;
+
+    width: 100%;
+    height: 374px;
+    left: 0px;
+    top: 0px;
+
+    border-radius: 0px;
+    background: rgb(84, 84, 84);
+    .player-title {
+      position: absolute;
+      width: 236px;
+      height: 60px;
+      top: 130px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      align-self: center;
+
+      text-align: center;
+
+      color: #fff;
+    }
+    .player-author {
+      position: absolute;
+      width: 167px;
+      height: 24px;
+      top: 202px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23.8px;
+      align-self: center;
+
+      text-align: center;
+
+      color: #898f97;
+    }
+    .player-buttons {
+      position: absolute;
+
+      top: 254px;
+      width: 167px;
+      height: 51px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .fb-button {
+        border: none;
+        background: none;
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        padding: 0;
+      }
+      .play-button-container {
+        top: 0px;
+        left: 35%;
+      }
+    }
+  }
+}
