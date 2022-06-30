@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from 'react'
 import PodcastPlayerController from '../PodcastPlayerController'
 import '../../assets/styles/components/podcast-player.scss'
 import Backdrop from './Backdrop'
+import likeImage from '../../assets/images/like.svg'
+import dislikeImage from '../../assets/images/dislike.svg'
+import soundWave from '../../assets/images/sound-wave.svg'
+import download from '../../assets/images/download.svg'
+import treeDots from '../../assets/images/tree-dots.svg'
 
 const PodcastPlayer = ({ tracks }) => {
   // State
@@ -124,6 +129,37 @@ const PodcastPlayer = ({ tracks }) => {
           onKeyUp={onScrubEnd}
           style={{ background: trackStyling }}
         />
+      </div>
+      <div className="podcast-features">
+        <button className="social-button">
+          <img src={likeImage} alt="" />
+        </button>
+        <span className="counts">155</span>
+        <span className="duration">24:09:12</span>
+        <span className="counts">15</span>
+        <button className="social-button">
+          <img src={dislikeImage} alt="" />
+        </button>
+      </div>
+      <div className="podcast-info">
+        <div className="info-items">
+          <span className="info-logos">
+            <img src={soundWave} />
+          </span>
+          <span className="info-texts">Episode 3</span>
+          <span className="info-logos">
+            <img src={download} />
+          </span>
+          <span className="info-texts">45mb</span>
+          <span className="tree-dots">
+            <img src={treeDots} />
+          </span>
+        </div>
+        <span className="podcast-summary">
+          The Big Oxmox advised her not to do so, because there were thousands
+          of bad Commas, wild Question Marks and devious Semikoli, but the
+          Little Blind Text didn’t listen.{' '}
+        </span>
       </div>
       <Backdrop
         trackIndex={trackIndex}

@@ -31,7 +31,6 @@ const PodcastPlayerController = ({
         </button>
       </div>
     </div>
-    <div className="podcast-features"></div>
   </div>
 )
 
