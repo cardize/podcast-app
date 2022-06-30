@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu'
 import menuItems from './menuItems'
-import '../../assets/styles/components/menu-item.scss'
+import '../../assets/styles/components/scroll-menu.scss'
 
 const App = () => {
   const [items, setItems] = React.useState(menuItems)
