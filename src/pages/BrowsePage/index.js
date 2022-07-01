@@ -12,11 +12,19 @@ import data from '../../assets/data/mock-data.json'
 const BrowsePage = (props) => {
   const [podcasts, setPodcasts] = useState(data)
 
+  const searchFor = (value) => {
+    setPodcasts(
+      data.filter((podcast) =>
+        podcast.title.toLowerCase().includes(value.toLowerCase()),
+      ),
+    )
+  }
+
   return (
     <div className="browse-main">
       <Logo />
       <span className="browse-title">Browse</span>
-      <Search />
+      <Search searchFor={searchFor} />
       <ScrollMenu />
       <span className="podcasts-title">Podcasts({podcasts.length})</span>
       <div className="podcasts-container">
