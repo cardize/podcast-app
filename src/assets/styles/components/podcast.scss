@@ -1,55 +1,31 @@
 .podcast-container {
+  display: grid;
   width: 309px;
   height: 180px;
-  left: 0px;
-  top: 12px;
   margin-bottom: 20px;
 
-  background: linear-gradient(
-      0deg,
-      rgba(25, 25, 25, 0.5),
-      rgba(80, 80, 80, 0.5)
-    ),
-    linear-gradient(
-      90deg,
-      rgba(102, 102, 102, 0.8) 10.94%,
-      rgba(255, 255, 255, 0) 100%
-    );
   border-radius: 24px 24px 0px 24px;
+  border: 2px red solid;
 
-  .podcast-background {
-    width: 309px;
-    height: 180px;
-    left: 0px;
-    top: 12px;
-    margin-bottom: 20px;
-
-    border-radius: 24px 24px 0px 24px;
-
-    opacity: 0.5;
-  }
   .podcast-name {
-    position: absolute;
-    width: 236px;
-    height: 60px;
-    left: 32px;
-    top: 29px;
+    display: grid;
 
-    margin: 0;
-    padding: 0;
+    width: 250px;
+    height: 60px;
+
+    margin-top: 29px;
+    margin-left: 32px;
 
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 125%;
+    font-size: 19px;
+
     color: #ffffff;
+    z-index: 100;
   }
   .podcast-date {
-    position: absolute;
     width: 145px;
     height: 22px;
-    left: 32px;
-    top: 108px;
 
     font-style: normal;
     font-weight: 400;
@@ -63,23 +39,20 @@
     }
   }
   .author-image {
-    position: absolute;
-    left: 32px;
-    top: 136px;
     width: 16px;
     height: 16px;
 
-    margin: 0;
+    margin-top: 8px;
     padding: 0;
 
     border-radius: 50%;
   }
   .podcast-author {
-    position: absolute;
+    margin-top: -18px;
+    margin-left: 25px;
+
     width: 100px;
     height: 22px;
-    left: 56px;
-    top: 133px;
 
     font-style: normal;
     font-weight: 400;
@@ -87,5 +60,24 @@
     line-height: 170%;
 
     color: #ffffff;
+  }
+
+  .podcast-background {
+    position: absolute;
+    display: grid;
+    width: 309px;
+    height: 180px;
+
+    margin-bottom: 20px;
+    border-radius: 24px 24px 0px 24px;
+
+    opacity: 0.5;
+    z-index: -1;
+  }
+  .date-container {
+    position: absolute;
+    margin-top: 113px;
+    margin-left: 32px;
+    display: grid;
   }
 }

@@ -1,7 +1,10 @@
 .play-button-container {
   position: absolute;
-  top: 105px;
-  left: 234px;
+  display: grid;
+
+  margin-top: 118px;
+  margin-left: 245px;
+
   .play-button {
     display: grid;
     align-items: center;

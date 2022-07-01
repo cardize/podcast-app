@@ -15,8 +15,8 @@ const Podcast = ({
   authorImage,
 }) => {
   return (
-    <div className="podcast-container">
-      <NavLink to="/podcast">
+    <NavLink to="/podcast">
+      <div className="podcast-container">
         <img
           className="podcast-background"
           src={artwork ? artwork : background}
@@ -37,8 +37,8 @@ const Podcast = ({
           <span className="podcast-author"> {author ? author : 'Artist'}</span>
         </span>
         <PlayButton />
-      </NavLink>
-    </div>
+      </div>
+    </NavLink>
   )
 }
 
