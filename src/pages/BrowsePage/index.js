@@ -21,13 +21,14 @@ const BrowsePage = (props) => {
       <span className="podcasts-title">Podcasts({podcasts.length})</span>
       <div className="podcasts-container">
         {podcasts.map((podcast) => (
-          <Podcast
-            key={podcast.author}
-            currentTime={'00:00'}
-            audioDuration={'00:00'}
-            podcastTitle={podcast.title}
-            author={podcast.author}
-          />
+          <div key={podcast.author} onClick={() => props.currentAudio(podcast)}>
+            <Podcast
+              currentTime={'00:00'}
+              audioDuration={'00:00'}
+              podcastTitle={podcast.title}
+              author={podcast.author}
+            />
+          </div>
         ))}
       </div>
     </div>
