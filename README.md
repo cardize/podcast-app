@@ -9,9 +9,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 <img width="286" alt="Screenshot 2022-07-02 at 01 38 36" src="https://user-images.githubusercontent.com/62019173/176975017-2c00f849-12f8-462b-9b71-ac81007992d9.png">
 
-<img width="287" alt="Screenshot 2022-07-02 at 01 39 07" src="https://user-images.githubusercontent.com/62019173/176975023-f25bdfda-4b7b-48e0-8596-fe04504697c2.png">
+<img width="284" alt="Screenshot 2022-07-02 at 02 11 18" src="https://user-images.githubusercontent.com/62019173/176976669-115a06f1-2dad-4a10-bbe1-4fa3a078beeb.png">
 
-<img width="286" alt="Screenshot 2022-07-02 at 01 39 43" src="https://user-images.githubusercontent.com/62019173/176975029-80da3fbe-0cfd-48dd-9502-972d010fe5e3.png">
+<img width="286" alt="Screenshot 2022-07-02 at 02 11 31" src="https://user-images.githubusercontent.com/62019173/176976674-110c235a-8b8c-4084-97c3-8e2da2207665.png">
+
 
 <img width="286" alt="Screenshot 2022-07-02 at 01 40 11" src="https://user-images.githubusercontent.com/62019173/176975037-d89bfb2b-7fbd-42de-badc-ad3c0ab5322c.png">
 
