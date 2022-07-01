@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PodcastPlayerController from '../PodcastPlayerController'
+import PlayButton from '../PlayButton'
 import '../../assets/styles/components/podcast-player.scss'
 import Backdrop from './Backdrop'
 import likeImage from '../../assets/images/like.svg'
@@ -9,7 +10,6 @@ import download from '../../assets/images/download.svg'
 import treeDots from '../../assets/images/tree-dots.svg'
 
 const PodcastPlayer = ({ tracks }) => {
-  // State
   const [trackIndex, setTrackIndex] = useState(0)
   const [trackProgress, setTrackProgress] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -90,7 +90,7 @@ const PodcastPlayer = ({ tracks }) => {
       setIsPlaying(true)
       startTimer()
     } else {
-      isReady.current = true
+      isReady.current = false
     }
   }, [trackIndex])
 

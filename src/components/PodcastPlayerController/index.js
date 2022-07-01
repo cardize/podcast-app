@@ -17,11 +17,24 @@ const PodcastPlayerController = ({
           <img src={backward} />
         </button>
         {isPlaying ? (
-          <PlayButton onClick={() => onPlayPauseClick(true)} />
+          <button
+            type="button"
+            className="pause"
+            onClick={() => onPlayPauseClick(false)}
+            aria-label="Pause"
+          >
+            <PlayButton isClicked={isPlaying} />
+          </button>
         ) : (
-          <PlayButton onClick={() => onPlayPauseClick(false)} />
+          <button
+            type="button"
+            className="play"
+            onClick={() => onPlayPauseClick(true)}
+            aria-label="Play"
+          >
+            <PlayButton />
+          </button>
         )}
-
         <button
           className="fb-button"
           onClick={onForwardClick}

@@ -9,7 +9,7 @@ const PlayButton = () => {
 
   return (
     <div className="play-button-container">
-      <button
+      <span
         className="play-button"
         onClick={() => setIsClicked(() => !isClicked)}
       >
@@ -17,7 +17,7 @@ const PlayButton = () => {
           className="play-button-image"
           src={isClicked ? pauseImage : playImage}
         />
-      </button>
+      </span>
     </div>
   )
 }
