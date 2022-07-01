@@ -1,4 +1,4 @@
-import { CURRENT_AUDIO_PLAYING } from '../actions/index'
+import { CURRENT_AUDIO_PLAYING } from '../actions/index.js'
 
 const INITIAL_STATE = {
   currentAudioPlaying: null,

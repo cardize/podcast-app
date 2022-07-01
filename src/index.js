@@ -5,13 +5,11 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from './redux/reducer/index'
 
-const store = createStore(reducer)
-
-ReactDOM.render(
-  <Provider store={store}>
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <Provider store={createStore(reducer)}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
   </Provider>,
-  document.getElementById('root'),
 )

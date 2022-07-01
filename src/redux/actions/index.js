@@ -1,6 +1,6 @@
-const CURRENT_AUDIO_PLAYING = 'CURRENT_AUDIO_PLAYING'
+export const CURRENT_AUDIO_PLAYING = 'CURRENT_AUDIO_PLAYING'
 
-export const addToCart = (item) => {
+export const currentAudio = (item) => {
   return {
     type: CURRENT_AUDIO_PLAYING,
     payload: item,
