@@ -14,8 +14,6 @@ const PodcastPlayer = (props) => {
   const [trackProgress, setTrackProgress] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
-  console.log(props)
-
   const {
     audio_url,
     title,
