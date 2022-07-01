@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 
 const podcastClient = ({ ...options }) => {
   if (!localStorage.getItem('token')) {
-    // Navigate to Login screen
+    window.location.href = '/'
   }
   axiosInstance.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem(
     'token',
@@ -17,7 +17,7 @@ const podcastClient = ({ ...options }) => {
   const onSuccess = (response) => response
   const onError = (error) => {
     if (error.response.status === SESSION_EXPIRED_STATUS_CODE) {
-      // Navigate to Login screen
+      window.location.href = '/'
     }
 
     return Promise.reject(error)
