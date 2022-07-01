@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { connect } from 'react-redux'
 import PodcastPlayerController from '../PodcastPlayerController'
-import PlayButton from '../PlayButton'
 import '../../assets/styles/components/podcast-player.scss'
 import Backdrop from './Backdrop'
 import likeImage from '../../assets/images/like.svg'
@@ -9,14 +9,25 @@ import soundWave from '../../assets/images/sound-wave.svg'
 import download from '../../assets/images/download.svg'
 import treeDots from '../../assets/images/tree-dots.svg'
 
-const PodcastPlayer = ({ tracks }) => {
-  const [trackIndex, setTrackIndex] = useState(0)
+const PodcastPlayer = (props) => {
+  const [trackIndex, setTrackIndex] = useState('')
   const [trackProgress, setTrackProgress] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
-  const { title, artist, color, image, audioSrc } = tracks[trackIndex]
+  console.log(props)
 
-  const audioRef = useRef(new Audio(audioSrc))
+  const {
+    audio_url,
+    title,
+    author,
+    likes,
+    dislikes,
+    description,
+    file_size,
+    category,
+  } = props.podcast
+
+  const audioRef = useRef(new Audio(audio_url))
   const intervalRef = useRef()
   const isReady = useRef(false)
 
@@ -34,7 +45,9 @@ const PodcastPlayer = ({ tracks }) => {
 
     intervalRef.current = setInterval(() => {
       if (audioRef.current.ended) {
-        toNextTrack()
+        setTrackProgress(0)
+        setIsPlaying(false)
+        clearInterval(intervalRef.current)
       } else {
         setTrackProgress(audioRef.current.currentTime)
       }
@@ -54,22 +67,6 @@ const PodcastPlayer = ({ tracks }) => {
     startTimer()
   }
 
-  const toPrevTrack = () => {
-    if (trackIndex - 1 < 0) {
-      setTrackIndex(tracks.length - 1)
-    } else {
-      setTrackIndex(trackIndex - 1)
-    }
-  }
-
-  const toNextTrack = () => {
-    if (trackIndex < tracks.length - 1) {
-      setTrackIndex(trackIndex + 1)
-    } else {
-      setTrackIndex(0)
-    }
-  }
-
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play()
@@ -82,7 +79,7 @@ const PodcastPlayer = ({ tracks }) => {
   useEffect(() => {
     audioRef.current.pause()
 
-    audioRef.current = new Audio(audioSrc)
+    audioRef.current = new Audio(audio_url)
     setTrackProgress(audioRef.current.currentTime)
 
     if (isReady.current) {
@@ -106,15 +103,13 @@ const PodcastPlayer = ({ tracks }) => {
       <div className="podcast-player">
         <img
           className="artwork"
-          src={image}
-          alt={`track artwork for ${title} by ${artist}`}
+          src={treeDots}
+          alt={`track artwork for ${title} by ${author}`}
         />
         <span className="player-title">{title}</span>
-        <span className="player-author">{artist}</span>
+        <span className="player-author">{author}</span>
         <PodcastPlayerController
           isPlaying={isPlaying}
-          onPrevClick={toPrevTrack}
-          onNextClick={toNextTrack}
           onPlayPauseClick={setIsPlaying}
         />
         <input
@@ -134,9 +129,9 @@ const PodcastPlayer = ({ tracks }) => {
         <button className="social-button">
           <img src={likeImage} alt="" />
         </button>
-        <span className="counts">155</span>
-        <span className="duration">24:09:12</span>
-        <span className="counts">15</span>
+        <span className="counts">{likes}</span>
+        <span className="duration">{duration}</span>
+        <span className="counts">{dislikes}</span>
         <button className="social-button">
           <img src={dislikeImage} alt="" />
         </button>
@@ -146,28 +141,25 @@ const PodcastPlayer = ({ tracks }) => {
           <span className="info-logos">
             <img src={soundWave} />
           </span>
-          <span className="info-texts">Episode 3</span>
+          <span className="info-texts">{category}</span>
           <span className="info-logos">
             <img src={download} />
           </span>
-          <span className="info-texts">45mb</span>
+          <span className="info-texts">{file_size}mb</span>
           <span className="tree-dots">
             <img src={treeDots} />
           </span>
         </div>
-        <span className="podcast-summary">
-          The Big Oxmox advised her not to do so, because there were thousands
-          of bad Commas, wild Question Marks and devious Semikoli, but the
-          Little Blind Text didn’t listen.{' '}
-        </span>
+        <span className="podcast-summary">{description}</span>
       </div>
-      <Backdrop
-        trackIndex={trackIndex}
-        activeColor={color}
-        isPlaying={isPlaying}
-      />
+      <Backdrop trackIndex={trackIndex} isPlaying={isPlaying} />
     </div>
   )
 }
+const mapStateToProps = (state) => {
+  return {
+    podcast: state.podcast,
+  }
+}
 
-export default PodcastPlayer
+export default connect(mapStateToProps)(PodcastPlayer)

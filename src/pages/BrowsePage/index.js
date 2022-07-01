@@ -1,12 +1,12 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Logo from '../../components/Logo'
 import Podcast from '../../components/Podcast'
 import Search from '../../components/Search'
 import ScrollMenu from '../../components/ScrollMenu'
 import '../../assets/styles/pages/browse-page.scss'
 import { connect } from 'react-redux'
-import { currentAudio } from '../../redux/actions/index'
+import { currentPodcast } from '../../redux/actions/index'
 import data from '../../assets/data/mock-data.json'
 
 const BrowsePage = (props) => {
@@ -21,7 +21,10 @@ const BrowsePage = (props) => {
       <span className="podcasts-title">Podcasts({podcasts.length})</span>
       <div className="podcasts-container">
         {podcasts.map((podcast) => (
-          <div key={podcast.author} onClick={() => props.currentAudio(podcast)}>
+          <div
+            key={podcast.author}
+            onClick={() => props.currentPodcast(podcast)}
+          >
             <Podcast
               currentTime={'00:00'}
               audioDuration={'00:00'}
@@ -36,8 +39,9 @@ const BrowsePage = (props) => {
 }
 const mapStateToProps = (state) => {
   return {
-    currenAudioPlaying: state.currentAudioPlaying,
+    podcast: state.podcast,
+    currentPodcast: state.currentPodcast,
   }
 }
 
-export default connect(mapStateToProps, { currentAudio })(BrowsePage)
+export default connect(mapStateToProps, { currentPodcast })(BrowsePage)

@@ -1,8 +1,8 @@
-export const CURRENT_AUDIO_PLAYING = 'CURRENT_AUDIO_PLAYING'
+export const CURRENT_PODCAST = 'CURRENT_PODCAST'
 
-export const currentAudio = (item) => {
+export const currentPodcast = (podcast) => {
   return {
-    type: CURRENT_AUDIO_PLAYING,
-    payload: item,
+    type: CURRENT_PODCAST,
+    payload: podcast,
   }
 }

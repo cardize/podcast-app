@@ -1,15 +1,16 @@
 import React from 'react'
 import '../../assets/styles/pages/podcast-page.scss'
 import PodcastPlayer from '../../components/PodcastPlayer'
-import tracks from '../../assets/test.js'
 import BackButton from '../../components/BackButton'
 import HamburgerMenuButton from '../../components/HamburgerMenuButton'
+import { connect } from 'react-redux'
 
-const PodcastPage = () => {
+const PodcastPage = (props) => {
+  const podcast = props.podcast
   return (
     <div className="podcast-main">
       <div className="podcast-player">
-        <PodcastPlayer tracks={tracks} />
+        <PodcastPlayer tracks={podcast} />
       </div>
       <BackButton />
       <HamburgerMenuButton />
@@ -17,4 +18,10 @@ const PodcastPage = () => {
   )
 }
 
-export default PodcastPage
+const mapStateToProps = (state) => {
+  return {
+    podcast: state.podcast,
+  }
+}
+
+export default connect(mapStateToProps)(PodcastPage)

@@ -1,13 +1,13 @@
-import { CURRENT_AUDIO_PLAYING } from '../actions/index.js'
+import { CURRENT_PODCAST } from '../actions/index.js'
 
 const INITIAL_STATE = {
-  currentAudioPlaying: null,
+  podcast: null,
 }
 
 export const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case CURRENT_AUDIO_PLAYING:
-      return { ...state, currentAudioPlaying: action.payload }
+    case CURRENT_PODCAST:
+      return { ...state, podcast: action.payload }
 
     default:
       return state
