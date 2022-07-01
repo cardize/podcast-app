@@ -19,7 +19,7 @@ const Auth = function (email, password, navigate, failed) {
     .then((response) => {
       console.log(response)
       if (response.data.access_token) {
-        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('token', response.data.access_token)
         navigate()
       } else {
         failed()

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from '../../components/Logo'
 import Podcast from '../../components/Podcast'
 import Search from '../../components/Search'
@@ -7,17 +7,27 @@ import ScrollMenu from '../../components/ScrollMenu'
 import '../../assets/styles/pages/browse-page.scss'
 import { connect } from 'react-redux'
 import { currentPodcast } from '../../redux/actions/index'
-import data from '../../assets/data/mock-data.json'
+import { searchPodcast } from '../../api/actions'
 
 const BrowsePage = (props) => {
-  const [podcasts, setPodcasts] = useState(data)
+  const [podcasts, setPodcasts] = useState([])
+  const [searchText, setSearchText] = useState('')
+
+  useEffect(
+    (value) => {
+      searchPodcast(searchText)
+        .then((data) => {
+          setPodcasts(data)
+        })
+        .catch((error) => {
+          alert(error)
+        })
+    },
+    [searchText],
+  )
 
   const searchFor = (value) => {
-    setPodcasts(
-      data.filter((podcast) =>
-        podcast.title.toLowerCase().includes(value.toLowerCase()),
-      ),
-    )
+    setSearchText(() => value)
   }
 
   return (

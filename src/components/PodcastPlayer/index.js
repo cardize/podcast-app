@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux'
 import PodcastPlayerController from '../PodcastPlayerController'
+import toHHMMSS from '../../utils'
 import '../../assets/styles/components/podcast-player.scss'
 import Backdrop from './Backdrop'
 import backgroundImage from '../../assets/images/background-2.jpeg'
@@ -129,7 +130,10 @@ const PodcastPlayer = (props) => {
           <img src={likeImage} alt="" />
         </button>
         <span className="counts">{likes}</span>
-        <span className="duration">{duration}</span>
+        <span className="duration">
+          {toHHMMSS(trackProgress ? trackProgress : 0)}/
+          {toHHMMSS(duration ? duration : 0)}
+        </span>
         <span className="counts">{dislikes}</span>
         <button className="social-button">
           <img src={dislikeImage} alt="" />
