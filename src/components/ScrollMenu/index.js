@@ -1,11 +1,12 @@
 import React from 'react'
+import { useState } from 'react'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu'
-import menuItems from './menuItems'
+import scrollMenuItems from './scrollMenuItems'
 import '../../assets/styles/components/scroll-menu.scss'
 
 const App = () => {
-  const [items, setItems] = React.useState(menuItems)
-  const [selected, setSelected] = React.useState([])
+  const [items, setItems] = useState(scrollMenuItems)
+  const [selected, setSelected] = useState([])
 
   const isItemSelected = (id) => !!selected.find((el) => el === id)
 

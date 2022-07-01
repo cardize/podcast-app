@@ -4,7 +4,7 @@ import authors from '../../assets/images/authors.svg'
 import podcasts from '../../assets/images/podcasts.svg'
 import episodes from '../../assets/images/episodes.svg'
 
-const menuItems = [
+const scrollMenuItems = [
   {
     id: '1',
     title: 'Categories',
@@ -32,4 +32,4 @@ const menuItems = [
   },
 ]
 
-export default menuItems
+export default scrollMenuItems
