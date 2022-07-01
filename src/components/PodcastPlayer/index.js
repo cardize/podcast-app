@@ -26,6 +26,8 @@ const PodcastPlayer = (props) => {
     file_size,
     category,
   } = props.podcast
+    ? props.podcast
+    : JSON.parse(localStorage.getItem('podcast'))
 
   const audioRef = useRef(new Audio(audio_url))
   const intervalRef = useRef()

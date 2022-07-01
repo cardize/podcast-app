@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 const PodcastPage = (props) => {
   const podcast = props.podcast
-  console.log(podcast)
+
   return (
     <div className="podcast-main">
       <div className="podcast-player">

@@ -7,6 +7,9 @@ const INITIAL_STATE = {
 export const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CURRENT_PODCAST:
+      localStorage.setItem('podcast', JSON.stringify(action.payload))
+      console.log(action.payload)
+      console.log(localStorage.getItem('podcast'))
       return { ...state, podcast: action.payload }
 
     default:
