@@ -21,7 +21,7 @@
       position: absolute;
       width: 236px;
       height: 60px;
-      top: 130px;
+      top: 110px;
 
       font-style: normal;
       font-weight: 500;
@@ -37,7 +37,7 @@
       position: absolute;
       width: 167px;
       height: 24px;
-      top: 202px;
+      top: 210px;
 
       font-style: normal;
       font-weight: 400;
@@ -47,7 +47,7 @@
 
       text-align: center;
 
-      color: #898f97;
+      color: #b5bac1;
     }
     .player-buttons {
       position: absolute;
@@ -82,10 +82,14 @@
     position: absolute;
     top: 450px;
     width: 309px;
+    height: 60px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    border-bottom: 1px solid #898f975c;
+
     .counts {
       font-weight: 500;
       font-size: 14px;

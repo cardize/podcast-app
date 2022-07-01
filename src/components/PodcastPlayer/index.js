@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import PodcastPlayerController from '../PodcastPlayerController'
 import '../../assets/styles/components/podcast-player.scss'
 import Backdrop from './Backdrop'
+import backgroundImage from '../../assets/images/background.png'
 import likeImage from '../../assets/images/like.svg'
 import dislikeImage from '../../assets/images/dislike.svg'
 import soundWave from '../../assets/images/sound-wave.svg'
@@ -101,7 +102,7 @@ const PodcastPlayer = (props) => {
       <div className="podcast-player">
         <img
           className="artwork"
-          src={treeDots}
+          src={backgroundImage}
           alt={`track artwork for ${title} by ${author}`}
         />
         <span className="player-title">{title}</span>
